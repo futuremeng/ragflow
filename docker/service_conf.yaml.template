@@ -33,11 +33,11 @@ redis:
 #   port: 5432
 #   max_connections: 100
 #   stale_timeout: 30
-# s3:
-#   endpoint: 'endpoint'
-#   access_key: 'access_key'
-#   secret_key: 'secret_key'
-#   region: 'region'
+s3:
+  endpoint: '${S3_ENDPOINT}'
+  access_key: '${S3_ACCESS_KEY}'
+  secret_key: '${S3_SECRET_KEY}'
+  region: '${S3_REGION}'
 # azure:
 #   auth_type: 'sas'
 #   container_url: 'container_url'
