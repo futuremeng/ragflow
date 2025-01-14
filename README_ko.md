@@ -33,7 +33,7 @@
 
 <h4 align="center">
   <a href="https://ragflow.io/docs/dev/">Document</a> |
-  <a href="https://github.com/infiniflow/ragflow/issues/162">Roadmap</a> |
+  <a href="https://github.com/infiniflow/ragflow/issues/4214">Roadmap</a> |
   <a href="https://twitter.com/infiniflowai">Twitter</a> |
   <a href="https://discord.gg/4XxujFgUN7">Discord</a> |
   <a href="https://demo.ragflow.io">Demo</a>
@@ -247,17 +247,16 @@ docker build -f Dockerfile -t infiniflow/ragflow:nightly .
 
 ## 🔨 소스 코드로 서비스를 시작합니다.
 
-1. Poetry를 설치하거나 이미 설치된 경우 이 단계를 건너뜁니다:
+1. uv를 설치하거나 이미 설치된 경우 이 단계를 건너뜁니다:
    ```bash
-   pipx install poetry
-   export POETRY_VIRTUALENVS_CREATE=true POETRY_VIRTUALENVS_IN_PROJECT=true
+   pipx install uv
    ```
 
 2. 소스 코드를 클론하고 Python 의존성을 설치합니다:
    ```bash
    git clone https://github.com/infiniflow/ragflow.git
    cd ragflow/
-   ~/.local/bin/poetry install --sync --no-root # install RAGFlow dependent python modules
+   uv sync --python 3.10 --all-extras # install RAGFlow dependent python modules
    ```
 
 3. Docker Compose를 사용하여 의존 서비스(MinIO, Elasticsearch, Redis 및 MySQL)를 시작합니다:
@@ -286,7 +285,7 @@ docker build -f Dockerfile -t infiniflow/ragflow:nightly .
 6. 프론트엔드 의존성을 설치합니다:  
    ```bash
    cd web
-   npm install --force
+   npm install
    ```  
 7. 프론트엔드 서비스를 시작합니다:  
    ```bash
@@ -306,7 +305,7 @@ docker build -f Dockerfile -t infiniflow/ragflow:nightly .
 
 ## 📜 로드맵
 
-[RAGFlow 로드맵 2024](https://github.com/infiniflow/ragflow/issues/162)을 확인하세요.
+[RAGFlow 로드맵 2025](https://github.com/infiniflow/ragflow/issues/4214)을 확인하세요.
 
 ## 🏄 커뮤니티
 

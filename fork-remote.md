@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-12-16 14:50:54
  * @LastEditors: Future Meng
- * @LastEditTime: 2025-01-14 23:31:37
+ * @LastEditTime: 2025-01-14 23:33:08
 -->
 
 1. 查看是否添加了更新源
@@ -18,7 +18,7 @@
    ```
 4. 合并源的分支
    ```
-   git merge upstream/master
+   git merge upstream/main
    ```
 
 5. 推送到

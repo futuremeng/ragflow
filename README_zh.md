@@ -33,7 +33,7 @@
 
 <h4 align="center">
   <a href="https://ragflow.io/docs/dev/">Document</a> |
-  <a href="https://github.com/infiniflow/ragflow/issues/162">Roadmap</a> |
+  <a href="https://github.com/infiniflow/ragflow/issues/4214">Roadmap</a> |
   <a href="https://twitter.com/infiniflowai">Twitter</a> |
   <a href="https://discord.gg/4XxujFgUN7">Discord</a> |
   <a href="https://demo.ragflow.io">Demo</a>
@@ -258,19 +258,17 @@ docker build --build-arg NEED_MIRROR=1 -f Dockerfile -t infiniflow/ragflow:night
 
 ## 🔨 以源代码启动服务
 
-1. 安装 Poetry。如已经安装，可跳过本步骤：  
+1. 安装 uv。如已经安装，可跳过本步骤：  
    ```bash
-   pipx install poetry
-   pipx inject poetry poetry-plugin-pypi-mirror
-   export POETRY_VIRTUALENVS_CREATE=true POETRY_VIRTUALENVS_IN_PROJECT=true
-   export POETRY_PYPI_MIRROR_URL=https://pypi.tuna.tsinghua.edu.cn/simple/
+   pipx install uv
+   export UV_INDEX=https://pypi.tuna.tsinghua.edu.cn/simple
    ```
 
 2. 下载源代码并安装 Python 依赖：  
    ```bash
    git clone https://github.com/infiniflow/ragflow.git
    cd ragflow/
-   ~/.local/bin/poetry install --sync --no-root # install RAGFlow dependent python modules
+   uv sync --python 3.10 --all-extras # install RAGFlow dependent python modules
    ```
 
 3. 通过 Docker Compose 启动依赖的服务（MinIO, Elasticsearch, Redis, and MySQL）：  
@@ -299,7 +297,7 @@ docker build --build-arg NEED_MIRROR=1 -f Dockerfile -t infiniflow/ragflow:night
 6. 安装前端依赖：  
    ```bash
    cd web
-   npm install --force
+   npm install
    ```  
 7. 启动前端服务：  
    ```bash
@@ -319,7 +317,7 @@ docker build --build-arg NEED_MIRROR=1 -f Dockerfile -t infiniflow/ragflow:night
 
 ## 📜 路线图
 
-详见 [RAGFlow Roadmap 2024](https://github.com/infiniflow/ragflow/issues/162) 。
+详见 [RAGFlow Roadmap 2025](https://github.com/infiniflow/ragflow/issues/4214) 。
 
 ## 🏄 开源社区
 

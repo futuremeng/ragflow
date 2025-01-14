@@ -32,7 +32,7 @@
 
 <h4 align="center">
   <a href="https://ragflow.io/docs/dev/">Document</a> |
-  <a href="https://github.com/infiniflow/ragflow/issues/162">Roadmap</a> |
+  <a href="https://github.com/infiniflow/ragflow/issues/4214">Roadmap</a> |
   <a href="https://twitter.com/infiniflowai">Twitter</a> |
   <a href="https://discord.gg/4XxujFgUN7">Discord</a> |
   <a href="https://demo.ragflow.io">Demo</a>
@@ -280,17 +280,16 @@ docker build -f Dockerfile -t infiniflow/ragflow:nightly .
 
 ## 🔨 Launch service from source for development
 
-1. Install Poetry, or skip this step if it is already installed:
+1. Install uv, or skip this step if it is already installed:
    ```bash
-   pipx install poetry
-   export POETRY_VIRTUALENVS_CREATE=true POETRY_VIRTUALENVS_IN_PROJECT=true
+   pipx install uv
    ```
 
 2. Clone the source code and install Python dependencies:
    ```bash
    git clone https://github.com/infiniflow/ragflow.git
    cd ragflow/
-   ~/.local/bin/poetry install --sync --no-root --with=full # install RAGFlow dependent python modules
+   uv sync --python 3.10 --all-extras # install RAGFlow dependent python modules
    ```
 
 3. Launch the dependent services (MinIO, Elasticsearch, Redis, and MySQL) using Docker Compose:
@@ -319,7 +318,7 @@ docker build -f Dockerfile -t infiniflow/ragflow:nightly .
 6. Install frontend dependencies:
    ```bash
    cd web
-   npm install --force
+   npm install
    ```  
 7. Launch frontend service:
    ```bash
@@ -339,7 +338,7 @@ docker build -f Dockerfile -t infiniflow/ragflow:nightly .
 
 ## 📜 Roadmap
 
-See the [RAGFlow Roadmap 2024](https://github.com/infiniflow/ragflow/issues/162)
+See the [RAGFlow Roadmap 2025](https://github.com/infiniflow/ragflow/issues/4214)
 
 ## 🏄 Community
 
