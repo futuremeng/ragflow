@@ -14,7 +14,6 @@ class RAGFlowS3(object):
         self.access_key = self.s3_config.get('access_key', None)
         self.secret_key = self.s3_config.get('secret_key', None)
         self.region = self.s3_config.get('region', None)
-        self.addressing_style = self.s3_config.get('addressing_style',None)
         self.__open__()
 
     def __open__(self):
@@ -29,8 +28,7 @@ class RAGFlowS3(object):
                 's3',
                 region_name=self.region,
                 aws_access_key_id=self.access_key,
-                aws_secret_access_key=self.secret_key,
-                addressing_style=self.addressing_style
+                aws_secret_access_key=self.secret_key
             )
         except Exception:
             logging.exception(f"Fail to connect at region {self.region}")
